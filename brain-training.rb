@@ -28,15 +28,12 @@ when "1"
   puts "Insert your solution:  "
   result = (multiplicand*multiplier)
 
-  if gets == result
-     puts "well done"
-  else
-     puts "\n wrong, do you want help?y/n"
-     if gets.chomp == "y"
-       puts "#{(first_digit(multiplicand)*10)} X #{(first_digit(multiplier)*10)}"+" = #{hint_one}\n#{(first_digit(multiplicand)*10)} X #{(last_digit(multiplier))}"+" = #{hint_three}\n#{(last_digit(multiplicand))} X #{(last_digit(multiplier))}"+" = #{hint_two}\n#{(last_digit(multiplicand))} X #{(first_digit(multiplier)*10)}"+" = #{hint_four}\n#"
-     else puts "try again"
-     end
-  end
+  until gets.chomp == result do
+   puts "\n wrong, do you want help?y/n"
+   if gets.chomp == "y"
+     puts "#{(first_digit(multiplicand)*10)} X #{(first_digit(multiplier)*10)}"+" = #{hint_one}\n#{(first_digit(multiplicand)*10)} X #{(last_digit(multiplier))}"+" = #{hint_three}\n#{(last_digit(multiplicand))} X #{(last_digit(multiplier))}"+" = #{hint_two}\n#{(last_digit(multiplicand))} X #{(first_digit(multiplier)*10)}"+" = #{hint_four}\n#\n type new solution"
+   else puts "try again"
+   end
 when "2"
 
   #variables
